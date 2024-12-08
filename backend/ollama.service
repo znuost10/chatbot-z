@@ -1,0 +1,11 @@
+[Unit]
+Description=Ollama service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/ollama serve
+
+[Install]
+WantedBy=multi-user.target
